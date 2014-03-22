@@ -17,6 +17,7 @@ gem 'omniauth-google-oauth2'
 gem 'puma'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
+gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1e5253d7e92ba'
 
 group :development do
   gem 'better_errors'
@@ -25,4 +26,5 @@ group :development do
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'debugger'
+  gem 'capistrano', '~> 3.1.0'
 end
