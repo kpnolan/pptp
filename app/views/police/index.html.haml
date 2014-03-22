@@ -1,0 +1,31 @@
+%h1 Listing Police
+
+%table.table.table-striped.table-condensed.table-bordered.bootstrap-datatable.datatable
+  %tr
+    %th First Name
+    %th Last Name
+    %th SvcId / Badge#
+    %th Year Verified
+    %th Title
+    %th Department
+    %th Precinct
+    %th
+    %th
+    %th
+
+  - @police.each do |police|
+    %tr
+      %td= police.first_name
+      %td= police.last_name
+      %td= police.svcid_badge
+      %td= police.year_verified
+      %td= police.title.name
+      %td= police.department.name
+      %td.text-center= police.precinct.nil? ? '   -    ' : police.precinct.name
+      %td= link_to 'Show', police
+      %td= link_to 'Edit', edit_police_path(police)
+      %td= link_to 'Destroy', police, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Police', new_police_path

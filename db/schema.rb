@@ -11,7 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140320065853) do
+ActiveRecord::Schema.define(version: 20140321090854) do
+
+  create_table "departments", force: true do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "police", force: true do |t|
+    t.string   "first_name",    null: false
+    t.string   "last_name",     null: false
+    t.integer  "svcid_badge"
+    t.integer  "year_verified", null: false
+    t.integer  "title_id",      null: false
+    t.integer  "department_id", null: false
+    t.integer  "precinct_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "precincts", force: true do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "titles", force: true do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"

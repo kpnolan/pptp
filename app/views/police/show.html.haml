@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b First name:
+  = @police.first_name
+%p
+  %b Last name:
+  = @police.last_name
+%p
+  %b Svcid badge:
+  = @police.svcid_badge
+%p
+  %b Year verified:
+  = @police.year_verified
+%p
+  %b Title:
+  = @police.title.name
+%p
+  %b Department:
+  = @police.department.name
+%p
+  %b Precinct:
+  = @police.precinct.nil? ? '-' : @police.precinct.name
+
+= link_to 'Edit', edit_police_path(@police)
+\|
+= link_to 'Back', police_index_path

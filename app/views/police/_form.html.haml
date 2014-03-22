@@ -1,0 +1,14 @@
+= simple_form_for(@police) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :svcid_badge
+    = f.input :year_verified
+    = f.association :title,      include_blank: true
+    = f.association :department, include_blank: true
+    = f.association :precinct,   include_blank: true
+
+  .form-actions
+    = f.button :submit

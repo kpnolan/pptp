@@ -1,0 +1,19 @@
+%h1 Listing Position Titles
+
+%table.table.table-striped.table-condensed.table-bordered.bootstrap-datatable.datatable
+  %tr
+    %th Job Title
+    %th
+    %th
+    %th
+
+  - @titles.each do |title|
+    %tr
+      %td= title.name
+      %td= link_to 'Show', title
+      %td= link_to 'Edit', edit_title_path(title)
+      %td= link_to 'Destroy', title, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Title', new_title_path

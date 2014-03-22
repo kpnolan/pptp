@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  svcid_badge: 1
+  year_verified: 1
+  title_id: 1
+  department_id: 1
+  precinct_id: 1
+
+two:
+  first_name: MyString
+  last_name: MyString
+  svcid_badge: 1
+  year_verified: 1
+  title_id: 1
+  department_id: 1
+  precinct_id: 1

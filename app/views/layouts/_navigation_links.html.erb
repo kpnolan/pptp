@@ -1,6 +1,10 @@
 <%# add navigation links to this file %>
 <% if user_signed_in? %>
   <li><%= link_to 'Users', users_path %></li>
+  <li><%= link_to 'Police', police_index_path %></li>
+  <li><%= link_to 'Precincts', precincts_path %></li>
+  <li><%= link_to 'Departments', departments_path %></li>
+  <li><%= link_to 'Titles', titles_path %></li>
 <% end %>
 <% if user_signed_in? %>
   <li><%= link_to 'Logout', signout_path %></li>
