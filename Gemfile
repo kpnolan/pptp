@@ -20,6 +20,7 @@ gem 'unicorn'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
 gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1e5253d7e92ba'
+gem 'capistrano-rvm'
 
 group :development do
   gem 'better_errors'
@@ -29,5 +30,4 @@ group :development do
   gem 'rails_layout'
   gem 'debugger'
   gem 'capistrano', '~> 3.1.0'
-  gem 'rvm-capistrano', '~> 3.1.0'
 end
